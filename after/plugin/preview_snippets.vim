@@ -1,9 +1,25 @@
 " Author: Jimmy Huang (1902161621@qq.com)
 " License: WTFPL
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Check ECY                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+fun! s:HasECY()
+  if exists('g:loaded_easycomplete') && g:loaded_easycomplete == v:true
+    return v:true
+  endif
+  return v:false
+endf
+
+if !s:HasECY()
+  finish
+endif
+
 let g:snippets_preview_dir = expand( '<sfile>:p:h:h:h' )
 let g:snippets_preview_dir = tr(g:snippets_preview_dir, '\', '/')
 let g:snippets_preview_dir = g:snippets_preview_dir . '/preview_file/'
+
+command! -bar -nargs=0 ECYBuildSnippetsPreview call BuildSnippetsPreview()
 
 fun! s:Timer_cb1(timer_id) abort
   call feedkeys("\<F1>", 'i')
