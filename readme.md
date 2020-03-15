@@ -9,6 +9,9 @@ Use Plugin-manager
 
 and then OK.
 
+中国垃圾网用户可以用这个镜像：
+> Plug 'https://gitee.com/Jimmy_Huang/ECY-SnippetsPreview'
+
 # Usage
 1. Originally, there are no preview file in `SirVer/ultisnips`.
 So you have to build snippets preview file.
