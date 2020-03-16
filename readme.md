@@ -4,6 +4,8 @@ Required
 
 > Plug 'SirVer/ultisnips'
 
+> Plug 'honza/vim-snippets'
+
 Use Plugin-manager
 > Plug 'hy172574895/ECY-SnippetsPreview'
 
